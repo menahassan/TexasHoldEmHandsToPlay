@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name='Texas Hold Em Hands To Play'

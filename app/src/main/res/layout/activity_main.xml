@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/pokerfelt"
+    android:id="@+id/relativelayout"
+    tools:context=".MainActivity">
+
+    <Spinner
+        android:id="@+id/card1"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@id/card2"
+        android:padding="-5dp"/>
+
+    <Spinner
+        android:id="@+id/card2"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:padding="-5dp" />
+
+    <Spinner
+        android:id="@+id/suit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/card2"
+        android:padding="-5dp"/>
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/card2"
+        android:layout_centerHorizontal="true"
+        android:onClick="sendMessage"
+        android:text="@string/button" />
+
+    <TextView
+        android:id="@+id/cards_label"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/card2"
+        android:layout_alignEnd="@id/card2"
+        android:textSize="22sp"
+        android:textAlignment="viewStart"
+        android:textColor="#000000"
+        android:text="@string/card_label" />
+
+    <TextView
+        android:id="@+id/suits_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/suit"
+        android:layout_alignStart="@id/suit"
+        android:textSize="22sp"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:text="@string/suits_label" />
+
+
+</RelativeLayout>
