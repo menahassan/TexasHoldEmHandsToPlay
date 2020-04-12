@@ -9,6 +9,8 @@ import android.content.Intent;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -46,6 +48,10 @@ public class MainActivity extends AppCompatActivity implements OnItemSelectedLis
                 R.array.suits_array, android.R.layout.simple_spinner_item);
         adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
+        spinner1.getBackground().setColorFilter(getResources().getColor(R.color.white), PorterDuff.Mode.SRC_ATOP);
+        spinner2.getBackground().setColorFilter(getResources().getColor(R.color.white), PorterDuff.Mode.SRC_ATOP);
+        spinner3.getBackground().setColorFilter(getResources().getColor(R.color.white), PorterDuff.Mode.SRC_ATOP);
+
         //num1
         spinner1.setAdapter(adapter1);
         spinner1.setOnItemSelectedListener(this);
@@ -56,11 +62,6 @@ public class MainActivity extends AppCompatActivity implements OnItemSelectedLis
         spinner3.setAdapter(adapter2);
         spinner3.setOnItemSelectedListener(this);
 
-        String card1Val = spinner1.getSelectedItem().toString();
-        String card2Val = spinner2.getSelectedItem().toString();
-        String suitVal = spinner3.getSelectedItem().toString();
-
-        index1 = getIndex(spinner1, card1Val);
     }
 
     public void sendMessage(View view) {

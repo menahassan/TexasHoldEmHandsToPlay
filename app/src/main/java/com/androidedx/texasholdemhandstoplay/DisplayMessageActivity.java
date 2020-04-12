@@ -28,7 +28,7 @@ public class DisplayMessageActivity extends MainActivity {
         textView.setTextSize(40);
         textView.setText(message);
         textView.setBackgroundResource(R.drawable.pokerfelt);
-        textView.setTextColor(Color.parseColor("#000000"));
+        textView.setTextColor(Color.parseColor("#FFFFFF"));
         // Set the text view as the activity layout
         setContentView(textView);
     }

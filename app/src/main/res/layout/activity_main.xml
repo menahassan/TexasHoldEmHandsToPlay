@@ -12,56 +12,61 @@
         android:id="@+id/card1"
         android:layout_width="60dp"
         android:layout_height="wrap_content"
+        android:layout_alignTop="@id/card2"
         android:layout_centerVertical="true"
         android:layout_toStartOf="@id/card2"
-        android:padding="-5dp"/>
+        />
 
     <Spinner
         android:id="@+id/card2"
         android:layout_width="60dp"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:padding="-5dp" />
+        android:layout_centerVertical="true"
+        />
 
     <Spinner
         android:id="@+id/suit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
+        android:layout_alignTop="@id/card2"
         android:layout_toEndOf="@id/card2"
-        android:padding="-5dp"/>
+        android:layout_centerVertical="true" />
 
     <Button
         android:id="@+id/submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/card2"
+        android:layout_below="@id/suit"
         android:layout_centerHorizontal="true"
         android:onClick="sendMessage"
+        android:textSize="20sp"
+        android:layout_marginTop="14dp"
         android:text="@string/button" />
 
     <TextView
         android:id="@+id/cards_label"
-        android:layout_width="100dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/card2"
-        android:layout_alignEnd="@id/card2"
-        android:textSize="22sp"
+        android:layout_alignStart="@id/card1"
+        android:layout_marginStart="-13dp"
+        android:text="@string/card_label"
         android:textAlignment="viewStart"
-        android:textColor="#000000"
-        android:text="@string/card_label" />
+        android:textColor="#FFFFFF"
+        android:textSize="37sp" />
 
     <TextView
         android:id="@+id/suits_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@id/suit"
-        android:layout_alignStart="@id/suit"
-        android:textSize="22sp"
+        android:layout_marginStart="18dp"
+        android:layout_toEndOf="@id/cards_label"
+        android:text="@string/suits_label"
         android:textAlignment="center"
-        android:textColor="#000000"
-        android:text="@string/suits_label" />
+        android:textColor="#FFFFFF"
+        android:textSize="37sp" />
 
 
 </RelativeLayout>
