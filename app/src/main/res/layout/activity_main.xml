@@ -8,6 +8,14 @@
     android:id="@+id/relativelayout"
     tools:context=".MainActivity">
 
+    <View
+        android:id="@+id/divider"
+        android:visibility="invisible"
+        android:layout_width="1dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="match_parent"
+        android:background="#000000" />
+
     <Spinner
         android:id="@+id/card1"
         android:layout_width="60dp"
@@ -15,14 +23,16 @@
         android:layout_alignTop="@id/card2"
         android:layout_centerVertical="true"
         android:layout_toStartOf="@id/card2"
+        android:layout_marginEnd="20dp"
         />
 
     <Spinner
         android:id="@+id/card2"
         android:layout_width="60dp"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
+        android:layout_toStartOf="@id/divider"
         android:layout_centerVertical="true"
+        android:layout_marginEnd="5dp"
         />
 
     <Spinner
@@ -30,7 +40,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@id/card2"
-        android:layout_toEndOf="@id/card2"
+        android:layout_toEndOf="@id/divider"
+        android:layout_marginStart="10dp"
         android:layout_centerVertical="true" />
 
     <Button

@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity implements OnItemSelectedLis
                     formula("J","10")||
                     formula("J","9")||
                     formula("10","9")){
-                    play = "Playable in all positions!";
+                    play = "Playable in all rounds!";
             }
 
             else if(formula("A","9")||
@@ -127,7 +127,7 @@ public class MainActivity extends AppCompatActivity implements OnItemSelectedLis
                     formula("J","8")||
                     formula("10","8")||
                     formula("9","8")){
-                    play = "Playable in middle/late positions!";
+                    play = "Playable in middle/late rounds!";
             }
 
             else if(formula("A","5")||
@@ -151,7 +151,7 @@ public class MainActivity extends AppCompatActivity implements OnItemSelectedLis
                     formula("7","5")||
                     formula("6","5")||
                     formula("5","4")){
-                    play = "Only playable in late positions!";
+                    play = "Only playable in late rounds!";
             }
             else{
                 play = "Should never be played!";
@@ -164,14 +164,14 @@ public class MainActivity extends AppCompatActivity implements OnItemSelectedLis
                     formula("A","10")||
                     formula("K","Q")||
                     formula("K","J")){
-                play = "Playable in all positions!";
+                play = "Playable in all rounds!";
             }
 
             else if(formula("K","10")||
                     formula("Q","J")||
                     formula("Q","10")||
                     formula("J","10")){
-                play = "Playable in middle/late positions!";
+                play = "Playable in middle/late rounds!";
             }
 
             else if(formula("A","9")||
@@ -186,7 +186,7 @@ public class MainActivity extends AppCompatActivity implements OnItemSelectedLis
                     formula("9","8")||
                     formula("9","7")||
                     formula("8","7")){
-                play = "Only playable in late positions!";
+                play = "Only playable in late rounds!";
             }
             else{
                 play = "Should never be played!";
@@ -203,18 +203,18 @@ public class MainActivity extends AppCompatActivity implements OnItemSelectedLis
                     formula("9","9")||
                     formula("8","8")||
                     formula("7","7")){
-                play = "Playable in all positions!";
+                play = "Playable in all rounds!";
             }
 
             else if(formula("6","6")||
                     formula("5","5")){
-                play = "Playable in middle/late positions!";
+                play = "Playable in middle/late rounds!";
             }
 
             else if(formula("4","4")||
                     formula("3","3") ||
                     formula("2","2")){
-                play = "Only playable in late positions!";
+                play = "Only playable in late rounds!";
             }
 
         }
