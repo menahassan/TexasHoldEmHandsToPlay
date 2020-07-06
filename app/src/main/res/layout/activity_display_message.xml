@@ -11,6 +11,13 @@
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"/>
+        android:textColor="#FFFFFF"
+        android:textSize="25dp"
+        android:layout_below="@id/textView1"
+        android:text="*position = a player's seating position in a round"/>
 </RelativeLayout>

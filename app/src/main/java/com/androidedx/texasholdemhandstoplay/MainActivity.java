@@ -1,15 +1,8 @@
 package com.androidedx.texasholdemhandstoplay;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.DialogFragment;
-import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
-import android.app.Dialog;
-import android.content.DialogInterface;
-import android.content.SharedPreferences;
-import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.view.View;
@@ -27,11 +20,23 @@ public class MainActivity extends AppCompatActivity implements OnItemSelectedLis
     public Spinner spinner1;
     public Spinner spinner2;
     public Spinner spinner3;
-    public int index1;
     public static String play;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Boolean isFirstRun = getSharedPreferences("PREFERENCE", MODE_PRIVATE)
+                .getBoolean("isFirstRun", true);
+
+        if (isFirstRun) {
+            //show start activity
+
+            startActivity(new Intent(MainActivity.this, Welcome.class));
+        }
+
+
+        getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit()
+                .putBoolean("isFirstRun", false).commit();
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //num1
@@ -114,7 +119,7 @@ public class MainActivity extends AppCompatActivity implements OnItemSelectedLis
                     formula("J","10")||
                     formula("J","9")||
                     formula("10","9")){
-                    play = "Playable in all rounds!";
+                    play = "Playable in all positions!";
             }
 
             else if(formula("A","9")||
@@ -127,7 +132,7 @@ public class MainActivity extends AppCompatActivity implements OnItemSelectedLis
                     formula("J","8")||
                     formula("10","8")||
                     formula("9","8")){
-                    play = "Playable in middle/late rounds!";
+                    play = "Playable in middle/late positions!";
             }
 
             else if(formula("A","5")||
@@ -151,7 +156,7 @@ public class MainActivity extends AppCompatActivity implements OnItemSelectedLis
                     formula("7","5")||
                     formula("6","5")||
                     formula("5","4")){
-                    play = "Only playable in late rounds!";
+                    play = "Only playable in late positions!";
             }
             else{
                 play = "Should never be played!";
@@ -164,14 +169,14 @@ public class MainActivity extends AppCompatActivity implements OnItemSelectedLis
                     formula("A","10")||
                     formula("K","Q")||
                     formula("K","J")){
-                play = "Playable in all rounds!";
+                play = "Playable in all positions!";
             }
 
             else if(formula("K","10")||
                     formula("Q","J")||
                     formula("Q","10")||
                     formula("J","10")){
-                play = "Playable in middle/late rounds!";
+                play = "Playable in middle/late positions!";
             }
 
             else if(formula("A","9")||
@@ -186,7 +191,7 @@ public class MainActivity extends AppCompatActivity implements OnItemSelectedLis
                     formula("9","8")||
                     formula("9","7")||
                     formula("8","7")){
-                play = "Only playable in late rounds!";
+                play = "Only playable in late positions!";
             }
             else{
                 play = "Should never be played!";
@@ -203,18 +208,18 @@ public class MainActivity extends AppCompatActivity implements OnItemSelectedLis
                     formula("9","9")||
                     formula("8","8")||
                     formula("7","7")){
-                play = "Playable in all rounds!";
+                play = "Playable in all positions!";
             }
 
             else if(formula("6","6")||
                     formula("5","5")){
-                play = "Playable in middle/late rounds!";
+                play = "Playable in middle/late positions!";
             }
 
             else if(formula("4","4")||
                     formula("3","3") ||
                     formula("2","2")){
-                play = "Only playable in late rounds!";
+                play = "Only playable in late positions!";
             }
 
         }

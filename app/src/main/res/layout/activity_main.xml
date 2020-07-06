@@ -18,7 +18,7 @@
 
     <Spinner
         android:id="@+id/card1"
-        android:layout_width="60dp"
+        android:layout_width="75dp"
         android:layout_height="wrap_content"
         android:layout_alignTop="@id/card2"
         android:layout_centerVertical="true"
@@ -28,7 +28,7 @@
 
     <Spinner
         android:id="@+id/card2"
-        android:layout_width="60dp"
+        android:layout_width="75dp"
         android:layout_height="wrap_content"
         android:layout_toStartOf="@id/divider"
         android:layout_centerVertical="true"

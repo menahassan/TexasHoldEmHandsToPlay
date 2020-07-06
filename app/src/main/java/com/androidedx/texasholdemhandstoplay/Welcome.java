@@ -3,11 +3,15 @@ package com.androidedx.texasholdemhandstoplay;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Spinner;
 
 public class Welcome extends AppCompatActivity {
 
     private ViewPager mViewPager;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,5 +26,11 @@ public class Welcome extends AppCompatActivity {
         // Set a PageTransformer
         mViewPager.setPageTransformer(false, new IntroPageTransformer());
 
+    }
+
+    public void onSkip(View view) {
+
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }

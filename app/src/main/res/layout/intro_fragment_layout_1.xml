@@ -4,42 +4,53 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <FrameLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <TextView
             android:id="@+id/title"
+            android:layout_centerHorizontal="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Welcome!"
             android:textAlignment="center"
-            android:gravity="center"
             android:textColor="@android:color/white"
-            android:layout_gravity="top|center"
-            android:layout_marginLeft="32dp"
-            android:layout_marginRight="32dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="20dp"
             android:textSize="50sp"/>
 
         <ImageView
             android:id="@+id/cards_image"
             android:layout_width="match_parent"
-            android:layout_height="370dp"
-            android:layout_gravity="center"
+            android:layout_height="320dp"
+            android:layout_below="@id/title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
             android:src="@drawable/cards_first" />
 
         <TextView
+            android:layout_centerHorizontal="true"
             android:id="@+id/description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center"
-            android:layout_marginBottom="50dp"
+            android:layout_below="@id/cards_image"
             android:textAlignment="center"
-            android:gravity="center"
-            android:text="Guide to playing Poker (Texas Hold'Em style) based on your starting cards"
+            android:layout_marginTop="10dp"
+            android:text="Swipe to see instructions"
             android:textColor="@android:color/white"
             android:textSize="24sp" />
+        <Button
+            android:id="@+id/skip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/description"
+            android:layout_centerHorizontal="true"
+            android:onClick="onSkip"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            android:text="Skip">
+        </Button>
 
-    </FrameLayout>
+    </RelativeLayout>
 
 </FrameLayout>
