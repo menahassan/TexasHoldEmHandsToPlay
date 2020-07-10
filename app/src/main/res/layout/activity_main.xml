@@ -23,7 +23,7 @@
         android:layout_alignTop="@id/card2"
         android:layout_centerVertical="true"
         android:layout_toStartOf="@id/card2"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="5dp"
         />
 
     <Spinner
@@ -32,7 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_toStartOf="@id/divider"
         android:layout_centerVertical="true"
-        android:layout_marginEnd="5dp"
+        android:layout_marginEnd="-15dp"
         />
 
     <Spinner
@@ -41,7 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@id/card2"
         android:layout_toEndOf="@id/divider"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="25dp"
         android:layout_centerVertical="true" />
 
     <Button
@@ -72,7 +72,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@id/suit"
-        android:layout_marginStart="18dp"
+        android:layout_marginStart="33dp"
         android:layout_toEndOf="@id/cards_label"
         android:text="@string/suits_label"
         android:textAlignment="center"
